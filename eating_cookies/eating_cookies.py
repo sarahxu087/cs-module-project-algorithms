@@ -2,14 +2,14 @@
 Input: an integer
 Returns: an integer
 '''
-from itertools import permutations 
 def eating_cookies(n):
-    # Your code here
-    perm = permutations(range(n-1))
-    for i in list(perm):
-        print (i)
-
-    pass
+    if (n== 1 or n == 0):
+        return 1
+    elif (n==2):
+        return 2
+    else:
+        return eating_cookies(n-3) + eating_cookies(n -2) + eating_cookies(n-1)
+    
 
 if __name__ == "__main__":
     # Use the main function here to test out your implementation
