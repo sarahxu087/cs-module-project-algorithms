@@ -2,8 +2,12 @@
 Input: an integer
 Returns: an integer
 '''
+from itertools import permutations 
 def eating_cookies(n):
     # Your code here
+    perm = permutations(range(n-1))
+    for i in list(perm):
+        print (i)
 
     pass
 
