@@ -10,10 +10,11 @@ def product_of_all_other_numbers(arr):
 
     for i in range(1, len(arr)):
         before[i] = before[i-1]*arr[i-1]
-
+        
+    print(before)
     for i in range(len(arr)-2, -1, -1):
         after[i] = after[i+1]*arr[i+1]
-
+    print(after)
     for i in range(0, len(arr)):
         product[i] = before[i]*after[i]
 
